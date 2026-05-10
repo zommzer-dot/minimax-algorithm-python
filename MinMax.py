@@ -1,19 +1,19 @@
 values =[[[5,6],[10,15]],[[20,30],[7,2]]]
-def minimax(node, ismax)
+def minimax(node, ismax):
 
-    if type(node) == int
+    if type(node) == int:
         return node
 #max
-    if ismax
+    if ismax:
         best = -float('inf')
-        for child in node
+        for child in node:
             value = minimax(child, False)
             best = max(best, value)
         return best
 #min
-    else
+    else:
         best = float('inf')
-        for child in node
+        for child in node:
             value = minimax(child, True)
             best = min(best, value)
         return best   
